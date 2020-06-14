@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import './stylesheets/shop.scss'
+// import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Shop from './Components/Shop';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Shop />
   </React.StrictMode>,
   document.getElementById('root')
 );
