@@ -1,4 +1,5 @@
 import React from "react";
+import Header from './Header'
 import Main from "./Main";
 import Menu from './Menu';
 
@@ -11,6 +12,7 @@ export default class Shop extends React.Component {
   render() {
     return (
       <div id="global-container">
+        <Header />
         <div id="container">
           <Main />
           <Menu />
