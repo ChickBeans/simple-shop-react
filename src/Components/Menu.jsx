@@ -12,9 +12,10 @@ const Menu = (props) => {
   const closeModal = () => {
     modalChange(false);
   };
-
+// Addボタンを押下しカートの数量を増やす。
   const countUp = () => {
     counter(count + 1);
+    // let flag = true;
   };
 
   let modal;

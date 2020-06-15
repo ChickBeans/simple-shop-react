@@ -149,6 +149,9 @@ li {
 .main {
   padding-top: rem(60);
   max-width: 100%;
+}
+
+.message {
   &__img-wrapper {
     width: rem(100);
     height: rem(100);
@@ -273,17 +276,20 @@ li {
     margin: 0 auto;
   }
   &__img {
-    max-width: 100%;
+    // max-width: 100%;
+    width: rem(300);
   }
 }
 
 
 .contact {
   padding-bottom: 50px;
+  // position: relative;
   &__theme {
     @extend .section__theme;
   }
   &__form {
+    position: relative;
     display: flex;
     flex-direction: column;
   }
@@ -305,10 +311,51 @@ li {
         transform: translateY(0);
         box-shadow: none;
         opacity: 1;
-        // background-color: rgb(43, 40, 40);
-        // color: white;
-        // border: none;
       }
     }
+  }
+  &__form{
+    & .complete {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgb(204, 146, 231);
+      border: 2px solid purple;
+      &__message {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -75%);
+        color: purple;
+      }
+      &__btn {
+        position: absolute;
+        display: inline-block;
+        text-align: center;
+        width: 25%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, 250%);
+        color: purple;
+        border: 3px solid purple;
+        box-shadow: 1px 3px 0 0 purple;
+        transition: all 0.2s;
+        font-weight: 600;
+        opacity: 0.8;
+        &:hover {
+          cursor: pointer;
+        }
+        &:active {
+          transform: translate(-50%, 260%);
+          box-shadow: none;
+          background-color: purple;
+          color: white;
+          opacity: 1;
+        }
+      }
+    }
+    // border: ;
   }
 }
